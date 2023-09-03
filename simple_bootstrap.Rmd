@@ -21,4 +21,3 @@ for (i in 1:1000){
 # bootstrap complete!
 mean(means) # returns bootstrapped mean, how close to 5.5?
 ```
-
