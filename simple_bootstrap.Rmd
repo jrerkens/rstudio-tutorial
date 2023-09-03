@@ -1,0 +1,24 @@
+---
+title: "Test"
+author: "Jimmy Erkens"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Super simple bootstrap
+
+```{r}
+# bootstrap mean of binom distribution idk
+# sample size is 10?
+# initializations
+set.seed(812)
+sample_data <- rbinom(10, 10, 0.55) # possible values 0-10, n = 10, true prob = 0.55
+
+means <- c()
+for (i in 1:1000){
+  means[i] = mean(sample(sample_data, replace = T)) # repeat a bunch of times
+}
+# bootstrap complete!
+mean(means) # returns bootstrapped mean, how close to 5.5?
+```
+
